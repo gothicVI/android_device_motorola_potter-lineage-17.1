@@ -29,6 +29,16 @@
     </Preference>
 
     <Preference
+        android:key="doze"
+        android:title="@string/ambient_display_title"
+        android:summary="@string/ambient_display_manage_summary"
+        android:icon="@drawable/ic_settings_doze">
+            <intent
+                android:targetPackage="org.lineageos.settings.device"
+                android:targetClass="org.lineageos.settings.device.DozeSettingsActivity" />
+    </Preference>
+
+    <Preference
         android:key="fp_gestures"
         android:title="@string/fingerprint_gestures_title"
         android:summary="@string/fingerprint_gestures_manage_summary"
@@ -36,6 +46,16 @@
             <intent
                 android:targetPackage="org.lineageos.settings.device"
                 android:targetClass="org.lineageos.settings.device.FPGestureSettingsActivity" />
+    </Preference>
+
+    <Preference
+        android:key="screen_off_gestures"
+        android:title="@string/screen_off_gestures_title"
+        android:summary="@string/screen_off_gestures_manage_summary"
+        android:icon="@drawable/ic_settings_screen_off_gestures">
+            <intent
+                android:targetPackage="org.lineageos.settings.device"
+                android:targetClass="org.lineageos.settings.device.ScreenOffGestureSettingsActivity" />
     </Preference>
 
 </PreferenceScreen>

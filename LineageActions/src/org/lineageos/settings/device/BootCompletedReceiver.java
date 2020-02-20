@@ -27,21 +27,19 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.util.Log;
 
+import org.lineageos.settings.device.util.FileUtils;
 import org.lineageos.settings.device.actions.Constants;
 import org.lineageos.settings.device.ServiceWrapper.LocalBinder;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     static final String TAG = "LineageActions";
+    final String NAVBAR_SHOWN = "navbar_shown";
 
     private ServiceWrapper mServiceWrapper;
 
     @Override
     public void onReceive(final Context context, Intent intent) {
         Log.i(TAG, "Booting");
-
-        if (intent.getAction() != null && !intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-            return;
-        }
 
         // Restore nodes to saved preference values
         for (String pref : Constants.sPrefKeys) {
