@@ -519,4 +519,7 @@
     <!-- Whether to artificially interpret all signal strengths as
          one bar higher than they actually are -->
     <bool name="config_inflateSignalStrength">true</bool>
+
+    <!-- Whether the device has hw keys -->
+    <bool name="config_canShowNavbarToggle">true</bool>
 </resources>
